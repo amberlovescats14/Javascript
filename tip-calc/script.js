@@ -10,11 +10,10 @@ function calculate() {
 }
 
 function addTotal() {
-  x = 1
-  if (bill.value > 1) {
-    x = bill.value * .15
-  }
-  console.log(x + bill.value)
+  a = parseFloat(bill.value * .15)
+  b = parseFloat(bill.value)
+  c = a + b
+  total.innerHTML = c
 }
 
 bill.addEventListener('input', calculate )
