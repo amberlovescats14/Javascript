@@ -19,3 +19,19 @@ function addTotal() {
 bill.addEventListener('input', calculate )
 bill.addEventListener('input', addTotal)
 
+
+
+function changeTip() {
+  tipPercent = parseFloat(tip.value)
+  billAmount = parseFloat(bill.value)
+  tipTotal = parseFloat(tipamount.value)
+  if (bill > 1) {
+    tipamount.innerHTML = tipPercent * billAmount
+    total.innerHTML = tipTotal + bill
+  }
+  else {
+    return
+  }
+
+}
+tip.addEventListener('input', changeTip)
